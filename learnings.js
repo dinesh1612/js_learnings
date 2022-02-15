@@ -13,6 +13,7 @@ function myFunction() {
     // write you code here // basic syntax of function // defyining the function
 }
 myFunction(); // this is how function is called
+var output = myFunction();//we can use return in side the function to give an output and save it in an variable
 console.log(myName); // this shows the value in console
 var floatvalue = 10.23564
 var intvalue = Math.floor( floatvalue ); // 10

@@ -14,3 +14,9 @@ function myFunction() {
 }
 myFunction(); // this is how function is called
 console.log(myName); // this shows the value in console
+var floatvalue = 10.23564
+var intvalue = Math.floor( floatvalue ); // 10
+var intvalue = Math.ceil( floatvalue ); // 11
+var intvalue = Math.round( floatvalue ); // basic math rounding style
+var intvalue = Math.trunc( floatvalue ); // 10 same as floor
+Math.pow(base, power) // to calculate power

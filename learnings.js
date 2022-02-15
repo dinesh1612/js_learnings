@@ -13,4 +13,4 @@ function myFunction() {
     // write you code here // basic syntax of function // defyining the function
 }
 myFunction(); // this is how function is called
-console.log(myName) // this shows the value in console
+console.log(myName); // this shows the value in console

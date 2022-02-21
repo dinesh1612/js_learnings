@@ -26,7 +26,7 @@ Math.random(); // generates random 16 digit decimal value from 0 to 1 but 1 not 
 // if we want to have a random of range (1,6) or (1, 100) or any range starting from 1 multiply the random number generated with the max value in range 
 // Math.random();* (6 or 100 as you wish to do so)
 // if esle conditions in js
-if (/* condition */){
+if (/* condition  eg is given*/ a === 1){
     // write some code if if is true
 }
 else {

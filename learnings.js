@@ -25,7 +25,7 @@ Math.pow(base, power) // to calculate power
 Math.random(); // generates random 16 digit decimal value from 0 to 1 but 1 not inclusive
 // if we want to have a random of range (1,6) or (1, 100) or any range starting from 1 multiply the random number generated with the max value in range 
 // Math.random();* (6 or 100 as you wish to do so)
-// if esle conditions in js
+// if esle conditions 
 if (/* condition  eg is given*/ a === 1){
     // write some code if if is true
 }
@@ -39,3 +39,15 @@ var array = ["dinesh", "reddy", "reddem"] // define array
 array.includes("dinesh") // returns true or false
 array.push("satyam") // satyam string is added to the array 
 array.pop(); // it removes the last element in array
+array,slice(/* enter the index of the array to rturn that specific elemment */);
+// while loops
+while (/* condition  eg is given*/ a === 1){
+    // code will execute until the above condition is false
+}
+//for loops
+for (Start ; end ; change){ // eg for ( i=0; i<5; i++){
+    // code for for loop        console.log(i)
+}                             // }
+parseInt(variable); // converts varibale to integer
+parseFloat(variable); // converts variable to float
+String(number); // converts number to string

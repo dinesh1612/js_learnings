@@ -107,3 +107,58 @@ String(number); // converts number to string
 */
 
 document.querySelector("h1").innerHTML = "bye dinesh";  // document is html file, queryselector selects the tag, innerhtml is the value inside the h1 tag, at last we are changing it
+
+// Document Object Model (dom)
+/*
+the entire html file in converted to dom by default in the brwser, each of the tag is split, for eg: html has 2 childs >> head and body, again each of head and body has children
+with the help of dom we can access individual species of child and parent with dom
+
+        eg: html code html code has multiple elements and tags inside it they are all random so to indicate multiple childs and parents for dom 
+
+            <!DOCTYPE html>
+            <html lang="en">
+            <head>
+                <meta charset="UTF-8">
+                <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Website</title>
+                <link rel="stylesheet" href="styles.css">
+            </head>
+            <body>
+                <h1 id="title">Hello </h1>
+                <input type="checkbox">
+                <button class="btn">CLick me</button>
+                <ul id = "table">
+                    <li class="item">
+                        <a href="https://www.google.com">Google</a>
+                    </li>
+                    <li class="item">blank1</li>
+                    <li class="item">blank2</li>
+                </ul>
+                <script src="index.js"></script>
+            </body>
+            </html>
+
+        below will be a understading of js using the above html file
+*/
+
+document; // it returns the entire html file for which js file is used
+document.firstElementChild; // it returns all the contents inside the html tag because document is the entire html and its first and only child is html tag
+document.firstElementChild.firstElementChild; // it returns all the contents inside head tag because, document is html file, first child is html and again first child for html tag is head tag 
+document.firstElementChild.lastElementChild; // it returns all the contents inside body tag because, document is html file, first child is html and last child for html tag is body tag 
+// this can go as many levels as we can, this can keep on continue
+// once we get into the element that we need, we can manipulate it by changing it as we needed for example
+var h1Tag = document.firstElementChild.lastElementChild.firstElementChild; // this will return h1 tag with value hello from above code, the moment goes as html file>> html tag >> body tag >> h1 tag
+// now we have our h1 tag stores in variable h1Tag we can use js to edit and manipulate the value inside the tag fro example
+h1Tag.innerHTML = "Bye Bye Dinesh"; // h1 tag vale is now changed
+// we can not only change values but also can do many other such as
+h1Tag.style.colour = "red"; // this changes colour of h1 tag to red
+document.querySelector("input").click(); // this searches for a query named input from the entire html document and then perform operation click on that, thish automatically checks the tick box
+
+// different methods of selecting elements inside the dom
+document.getElementsByTagName("li"); // returns all elements with tag name li in an array
+document.getElementsByTagName("li")[0]; // we can find any individual element in the array formed by mentioning the count in array
+document.getElementsByClassName("btn"); // retunrs all elements with class name btn in an array
+document.getElementsByClassName("btn")[0]; // we can find any individual element in the array formed by mentioning the count in array
+// we can add .style.colour to the elements above and change colours as well
+

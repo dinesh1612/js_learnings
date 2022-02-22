@@ -51,3 +51,59 @@ for (Start ; end ; change){ // eg for ( i=0; i<5; i++){
 parseInt(variable); // converts varibale to integer
 parseFloat(variable); // converts variable to float
 String(number); // converts number to string
+
+
+// integration of js with html
+/* different methods of integration js into html
+1. inline js
+
+            eg: <body onload="alert('hello dinesh');">
+
+            <!DOCTYPE html>
+            <html lang="en">
+            <head>
+                <title>website</title>
+                <link rel="stylesheet" href="styles.css">
+            </head>
+            <body onload="alert('hello dinesh');">  here is the js code
+                <h1>hello</h1>
+            </body>
+            </html>
+        it is not a very good practise of using inline js, it is difficult to debug
+
+2. internal js
+
+            eg: <script type="text/javascript">
+                alert("hi i am dinesh");
+                </script>
+
+            <!DOCTYPE html>
+            <html lang="en">
+            <head>
+                <link rel="stylesheet" href="styles.css">
+            </head>
+            <body>
+                <h1>hello</h1>
+                <script type="text/javascript">
+                    alert("hi i am dinesh");       here is the js code
+                </script>
+            </body>
+            </html>
+
+3. external js
+
+            eg: <script src="index.js"></script>  we add js file in the repo and indicate that in scr 
+
+            <!DOCTYPE html>
+            <html lang="en">
+            <head>
+                <link rel="stylesheet" href="styles.css">
+            </head>
+            <body>
+                <h1>hello</h1>
+                <script src="index.js"></script>    here is the js code file
+            </body>
+            </html>
+*/
+
+document.querySelector("h1").innerHTML = "bye dinesh";  // document is html file, queryselector selects the tag, innerhtml is the value inside the h1 tag, at last we are changing it

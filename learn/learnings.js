@@ -126,6 +126,7 @@ with the help of dom we can access individual species of child and parent with d
             </head>
             <body>
                 <h1 id="title">Hello </h1>
+                <a href="https://www.google.com">Google</a>
                 <input type="checkbox">
                 <button class="btn">CLick me</button>
                 <ul id = "table">
@@ -152,7 +153,7 @@ var h1Tag = document.firstElementChild.lastElementChild.firstElementChild; // th
 // now we have our h1 tag stores in variable h1Tag we can use js to edit and manipulate the value inside the tag fro example
 h1Tag.innerHTML = "Bye Bye Dinesh"; // h1 tag vale is now changed
 // we can not only change values but also can do many other such as
-h1Tag.style.colour = "red"; // this changes colour of h1 tag to red
+h1Tag.style.color = "red"; // this changes colour of h1 tag to red // check spelling of color it is color only and not colour
 document.querySelector("input").click(); // this searches for a query named input from the entire html document and then perform operation click on that, thish automatically checks the tick box
 
 // different methods of selecting elements inside the dom
@@ -161,4 +162,39 @@ document.getElementsByTagName("li")[0]; // we can find any individual element in
 document.getElementsByClassName("btn"); // retunrs all elements with class name btn in an array
 document.getElementsByClassName("btn")[0]; // we can find any individual element in the array formed by mentioning the count in array
 // we can add .style.colour to the elements above and change colours as well
-
+document.getElementById("table"); // returns all ements in ul because its id is table
+// we can configure the above with as we like and perform a query and we can even update a element using .innerHTML
+// we can use query selector to find elements by class, id , tag and element
+// for element or tag use directly the name
+document.querySelector("h1")  // if there are multiple then it returns the first one
+// for id use with # before the id name
+document.querySelector("#title");
+// for class use . before the class name
+document.querySelector(".btn");
+// in the above all examples of querySelector >> id, class, tag, elements are called selectors
+// if we want to include multiple selectors of different kinds in a single query then seperate them with space
+document.querySelector("li a"); // this will return the google link inside the li tag 
+document.querySelector("#table .item a") // this will go as find element with id "table", then find element with class "item", then find element with tag name "a"
+// when we are using the query selector method if there are multiple elements that satisfy the querySelector method, then use querySelectorAll
+document.querySelectorAll("#table .item") // this returns an array of elements with class name "item" inside the element with id "table"
+// and to find out individual elements with querySelectorAll menthod indicate the array position and update or manipulate the element
+document.querySelectorAll("#table .item")[2].innerHTML = "2nd blank" // this changes "blank 2" to "2nd blank"
+// for styling with js refer to https://www.w3schools.com/jsref/dom_obj_style.asp 
+document.querySelector("button").classList; // this will return the class that is attached to element button
+document.querySelector("button").classList.add("visibility"); // add another class to the element button
+document.querySelector("button").classList.remove("visibility"); // remove class "visibility" from button element
+document.querySelector("button").classList.toggle("visibility"); // if class "visilibility" present remove, if not then add
+// by adding class in js we can keep our styles in css files and use them to add behaviour in our website
+// for example, we create a style for class name "behaviour" in css file and when we add a class using classList, along with the class we add behaviour to it as well
+// as we already included style for that class in our css file
+<h1><em>Hello Dinesh</em></h1>
+document.querySelector("h1").innerHTML; // refer to above example >> this returns the value inside h1 tag that is <em>Hello Dinesh</em>
+// the vale is returned with the emphasis tag as well 
+// if we have multiple tags and want the text only to be shown we use .textContent
+document.querySelector("h1").textContent; // refer to above example >> this returns only the text inside "Hello Dinesh"
+// by using this functionality we can add behaviour to our text witin the go using js
+document.querySelector("h1").innerHTML = "<em>Hello Dinesh</em>" // this was emphasis tag is added to the element and text is changed along with style
+// we can get attributes that are present in an element
+document.querySelector("a").attributes; // this gives me the attributes that are present in a tag returns href
+document.querySelector("a").getAttribute("href"); // gives the value inside the attribute href "https://www.google.com"
+document.querySelector("a").setAttribute("href", "https://www.gmail.com"); // this edit the attribute from google to gmail

@@ -1,4 +1,5 @@
 var drum_buttons = document.querySelectorAll(".drum")
+
 for (i=0;i<drum_buttons.length; i++) {
     drum_buttons[i].addEventListener("click", function () {
         makeSound(this.innerHTML);

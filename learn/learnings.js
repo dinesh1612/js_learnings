@@ -198,3 +198,52 @@ document.querySelector("h1").innerHTML = "<em>Hello Dinesh</em>" // this was emp
 document.querySelector("a").attributes; // this gives me the attributes that are present in a tag returns href
 document.querySelector("a").getAttribute("href"); // gives the value inside the attribute href "https://www.google.com"
 document.querySelector("a").setAttribute("href", "https://www.gmail.com"); // this edit the attribute from google to gmail
+// event listner this helps to find button clicks and other
+document.querySelector("button").addEventListener(event, js_function) // here event is what to listen for (https://www.w3schools.com/jsref/dom_obj_event.asp) this link has the type of events that can be listned to 
+// js_function above is what to do when event is hit, it is basically a js function
+// event should always be passed in a string , js_function shouldskip params because adding () will directly call the function without the event listner getting activated, that is why we skip that
+// we dont even create a new function and call that directly we write the function in the event listener only withour any function name
+document.querySelector("button").addEventListener("event", function () {
+    alert("i got clicked");
+})                                                    // this is the best practise of writing event listner we can follow the aboce method also 
+debugger;// if you are stuck and dont know what is happeninng to get the flow of the script use debugger; in console
+this // this is a inbuilt function of js which enable the current object, class or anything that is being used
+var student = {id: 1, name: "dinesh", class: 12, roll_no: 12345, address: "Hyderabad"}// ruby has hash and same as in js , hash are called objects in js
+// constructor functions are used to create objects in js or has in ruby
+// constructor functions writing is shown below
+function CreateObject (id, name, roll_no, address){                  // if we are using such functions to construct objects , such functions are called constructor functions
+    this.id = id;                                                  // they dont use camelcase, every starting letter is capital
+    this.name = name;                                                            // this is how we create a generalised function to create objects
+    this.roll_no = roll_no;
+    this.address = address;
+}
+
+var studentDinesh = new CreateObject(1,"dinesh", 124, "Hyderabad")    // this is how ne object is created
+// we can use constructor functions even to have a function inside them
+//eg
+function BellBoy (name, age, expert, clean){
+    this.name = name;
+    this.age = age;
+    this.expert = expert;
+    this.clean = function () {                                        // function need not be given any name because it is called by default using object key clean
+        alert("cleaning in progress....");
+    }
+}
+
+// switch in js // switvhes are basically long if else if and else loops instead of writing long if else statements we write switch conditions
+// syntax
+switch ("value to compare"){                   // we are presented with a value to compare
+    case "value to compare":                   // if value is equal to something that is in case after string then code will execute                                     
+        // write code;                          // this will run because both value are same
+        break;
+    case "value not matched with above":    // this value is not present in above variable this will skip
+        // write code;                      //  this wont run because values are different, it is skipped
+        break;
+
+    default: console.log();                   // else statement
+}
+// we can view the event that trigerred a function using event
+// eg: // callback functions
+document.addEventListener(function (event){
+    console.log(event);                           //  this way we can find which event has triggered the function, sunch functions are called callback functions
+})

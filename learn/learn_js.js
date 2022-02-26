@@ -230,7 +230,7 @@ function BellBoy (name, age, expert, clean){
     }
 }
 
-// switch in js // switvhes are basically long if else if and else loops instead of writing long if else statements we write switch conditions
+// switch in js // switches are basically long if else if and else loops instead of writing long if else statements we write switch conditions
 // syntax
 switch ("value to compare"){                   // we are presented with a value to compare
     case "value to compare":                   // if value is equal to something that is in case after string then code will execute                                     

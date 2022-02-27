@@ -51,7 +51,7 @@ function verify(){
                 $("body").addClass("game-over");
                 setTimeout(function (){
                     $("body").removeClass("game-over");
-                    $("h1").html("Press Any Key To Start");
+                    $("h1").html("Game-Over, Press Any Key To Re-Start");
                 }, 1050)
 
         } 

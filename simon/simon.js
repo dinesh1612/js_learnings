@@ -8,6 +8,7 @@ function random(){
     var rand = Math.floor((Math.random()*4));
     var className = classArray[rand];
     autoClick(className);
+    new Audio("sounds/auto.mp3").play();
     autoArray.push(className);
 }
 
@@ -27,7 +28,11 @@ $(document).keydown(function () {
 
 $(".btn").click(function () { 
     var  userClass = "#"+$(this).attr("id")
-    autoClick(userClass);
+    $(userClass).addClass("pressed");
+    new Audio("sounds/user.mp3").play();
+    setTimeout(function (){
+        $(userClass).removeClass("pressed");
+    }, 250)
     userArray.push(userClass);
     console.log(userClass)
     console.log(userArray)
@@ -38,6 +43,7 @@ function verify(){
     for (i=0; i< (userArray.length) ; i++){
         if (autoArray[i] != userArray[i]) {
                 $("h1").html("dead!!!");
+                new Audio("sounds/wrong.mp3").play();
                 level = 0;
                 started = false;
                 autoArray = [];

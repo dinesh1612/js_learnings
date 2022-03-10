@@ -49,7 +49,7 @@ for (Start ; end ; change){ // eg for ( i=0; i<5; i++){
     // code for for loop        console.log(i)
 }                             // }
 parseInt(variable); // converts varibale to integer
-parseFloat(variable); // converts variable to float
+parseFloat(variable); // converts variable to float 
 String(number); // converts number to string
 
 
